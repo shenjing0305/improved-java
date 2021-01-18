@@ -1,0 +1,25 @@
+spring:
+  redis:
+    host: 10.224.18.136
+    port: 6379
+    #sentinel:
+      #nodes: 127.0.0.1:26379,127.0.0.1:26380,127.0.0.1:26381
+      #master: mymaster
+    #nodes: 10.224.18.136:7000,10.224.18.136:8001,10.224.18.136:9000,10.224.18.136:7001,10.224.18.136:8000,10.224.18.136:9001
+    max-redirects: 3
+    password:
+    database: 0
+    timeout: 5000
+    #password: 123456
+    jedis:
+      pool:
+        max-active: 300
+        max-wait: 2000
+        max-idle: 20
+        min-idle: 5
+      shutdown-timeout: 500
+  redisson:
+    connectionPoolSize: 64
+    connectionMinimumIdleSize: 10
+    slaveConnectionPoolSize: 250
+    masterConnectionPoolSize: 250
